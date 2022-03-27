@@ -9,7 +9,7 @@ const count = ref(0)
 </script>
 
 <template>
-  <el-button>3333</el-button>  
-  <a href="#">3333333</a>
+  <el-button @click="$store.commit('add')">3333</el-button>  
+  <a href="#">{{$store.state.counter}}</a>
 </template>
 

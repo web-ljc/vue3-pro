@@ -17,6 +17,7 @@ export default defineConfig(({command, mode}) => {
         '@': path.resolve(__dirname, 'src'),
         'apis': path.resolve(__dirname, 'src/apis'),
         'comps': path.resolve(__dirname, 'src/components'),
+        'views': path.resolve(__dirname, 'src/views'),
       }
     }
   }

@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-
+import router from './router'
+import store from './store'
 // 全局样式
 import './styles/index.less'
 
@@ -8,4 +9,4 @@ import './styles/index.less'
 import element3  from './plugins/element3'
 
 
-createApp(App).use(element3).mount('#app')
+createApp(App).use(router).use(store).use(element3).mount('#app')
