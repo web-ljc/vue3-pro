@@ -1,5 +1,5 @@
 // 全局引入element3
-import element3, { ElButton } from 'element3'
+import element3 from 'element3'
 import 'element3/lib/theme-chalk/index.css'
 
 // 按需引入

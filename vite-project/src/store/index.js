@@ -1,4 +1,4 @@
-import { createStore } from "vuex";
+import { createStore } from 'vuex'
 
 // 工厂函数创建
 export default createStore({

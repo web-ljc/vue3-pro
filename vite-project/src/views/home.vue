@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-  import HelloWorld from 'comps/HelloWorld.vue'
+import HelloWorld from 'comps/HelloWorld.vue'
 </script>
 
 <style lang="less" scoped>

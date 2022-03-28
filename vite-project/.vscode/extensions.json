@@ -1,3 +1,13 @@
 {
-  "recommendations": ["johnsoncodehk.volar"]
+  "recommendations": ["johnsoncodehk.volar"],
+  "editor.tabSize": 2,
+  "eslint.run": "onSave",
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "html",
+    "vue",
+    "jsx"
+  ]
 }
