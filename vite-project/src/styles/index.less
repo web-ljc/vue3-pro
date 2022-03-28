@@ -1,12 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+html, body, #app {height: 100%}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 
   a {
     color: #42b983;
   }
+}
+
+.el-header, .el-footer {
+  background-color: #fff;
+  color: #2c3e50;
+  text-align: center;
+  line-height: 60px;
+}
+
+.el-aside {
+  background-color: #1D215B;
+  color: #333;
+  text-align: center;
+  line-height: 200px;
+  height: 100vh;
+}
+
+.el-main {
+  background-color: #E9EEF3;
+  color: #333;
+  text-align: center;
+  line-height: 160px;
+}
+
+body > .el-container {
+  margin-bottom: 40px;
 }
