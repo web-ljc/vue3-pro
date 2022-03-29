@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@vue/eslint-config-standard": "^6.1.0",
+    "axios": "^0.26.1",
     "element3": "^0.0.40",
     "eslint": "^8.12.0",
     "mockjs": "^1.1.0",

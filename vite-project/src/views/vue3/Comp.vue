@@ -7,6 +7,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import request from '@/utils/request'
 // 获取组件传值
 defineProps({
   msg: String
@@ -28,11 +29,17 @@ defineExpose({
   handleClick
 })
 
-fetch('/api/getUsers')
-  .then((res) => res.json())
-  .then((data) => {
-    console.info(data, 88888)
-  })
+try {
+  const users = await request('/api/getUsers')
+  console.info(users, 'request')
+} catch (error) {
+  console.info(error)
+}
+// fetch('/api/getUsers')
+//   .then((res) => res.json())
+//   .then((data) => {
+//     console.info(data, 88888)
+//   })
 </script>
 
 <style lang="less" scoped>

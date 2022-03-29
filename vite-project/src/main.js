@@ -6,7 +6,11 @@ import store from './store'
 import './styles/index.less'
 
 // 全局引入element3
-import element3  from './plugins/element3'
+import element3 from './plugins/element3'
 
 
-createApp(App).use(router).use(store).use(element3).mount('#app')
+createApp(App)
+  .use(router)
+  .use(store)
+  .use(element3)
+  .mount('#app')
