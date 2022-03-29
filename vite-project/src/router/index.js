@@ -12,13 +12,13 @@ export const routes = [
       {
         path: '/',
         component: () => import('views/home.vue'),
-        name: 'Home',
-        meta: { title: 'Vue2', icon: 'el-icon-document' }
+        name: 'Vue2',
+        meta: { title: 'Vue2', test:false, icon: 'el-icon-document' }
       },
       {
-        path: '/vue',
+        path: '/vue3',
         component: () => import('views/vue/index.vue'),
-        name: 'Vue',
+        name: 'Vue3',
         meta: { title: 'Vue3', icon: 'el-icon-document-copy' }
       }
     ]

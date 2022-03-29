@@ -1,7 +1,7 @@
 <template>
   <el-row>
     <el-col :span="12" class="text-left">
-      Vue Project
+      <breadcrumb />
     </el-col>
     <el-col :span="12" class="text-right">
       <el-dropdown class="avatar-container" trigger='hover'>
@@ -20,7 +20,9 @@
     </el-col>
   </el-row>
 </template>
-
+<script setup>
+import Breadcrumb from './Breadcrumb.vue'
+</script>
 <style lang="less">
 .avatar-container {
   // color: #fff;
