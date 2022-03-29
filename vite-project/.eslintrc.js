@@ -21,7 +21,7 @@ module.exports = {
     'indent': ['error', 2],
     'quotes': ['error', 'single'],
     'semi': ['error', 'never'],
-    'no-console': 1,
+    // 'no-console': 1,
     'no-var': 2,
     'object-curly-spacing': [2, 'always'],
     'block-spacing': [2, 'never'],

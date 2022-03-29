@@ -17,7 +17,7 @@ export const routes = [
       },
       {
         path: '/vue3',
-        component: () => import('views/vue/index.vue'),
+        component: () => import('views/vue3/index.vue'),
         name: 'Vue3',
         meta: { title: 'Vue3', icon: 'el-icon-document-copy' }
       }
