@@ -29,12 +29,12 @@ defineExpose({
   handleClick
 })
 
-try {
-  const users = await request('/api/getUsers')
-  console.info(users, 'request')
-} catch (error) {
-  console.info(error)
-}
+// try {
+//   const users = await request('/api/getUsers')
+//   console.info(users, 'request')
+// } catch (error) {
+//   console.info(error)
+// }
 // fetch('/api/getUsers')
 //   .then((res) => res.json())
 //   .then((data) => {
