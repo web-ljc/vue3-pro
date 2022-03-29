@@ -1,6 +1,6 @@
 <template>
   <el-button @click="$store.commit('add')">{{count}}</el-button>
-  <a href="#">{{$store.state.counter}}</a>
+  <a href="#">vue</a>
 </template>
 
 <script setup>

@@ -1,37 +1,36 @@
 <template>
-  <el-menu :default-openeds="['1']">
-      <el-submenu index="1">
-        <template v-slot:title>
-          <i class="el-icon-menu"></i>Vue2
-        </template>
-        <el-menu-item index="1-3">选项3</el-menu-item>
-      </el-submenu>
-      <el-submenu index="2">
-        <template v-slot:title>
-          <i class="el-icon-menu"></i>Vue3
-        </template>
-        <el-menu-item index="3-1">选项1</el-menu-item>
-        <el-menu-item index="3-2">选项2</el-menu-item>
-        <el-menu-item index="3-3">选项3</el-menu-item>
-      </el-submenu>
-      <el-submenu index="3">
-        <template v-slot:title>
-          <i class="el-icon-setting"></i>React
-        </template>
-        <el-submenu index="1-4">
-          <template v-slot:title>选项4</template>
-          <el-menu-item index="1-4-1">选项4-1</el-menu-item>
-        </el-submenu>
-      </el-submenu>
-    </el-menu>
+  <el-menu
+    :default-active="activeMenu"
+    class="el-menu-vertical-demo text-left"
+    background-color="#1d215b"
+    text-color="#fff"
+    active-text-color="#636ef5"
+    >
+    <!-- caidan -->
+    <sidebar-item
+      v-for="route in routes"
+      :item="route"
+      :key="route.path"
+      :base-path="route.path"
+    />
+  </el-menu>
 </template>
 
-<script>
-export default {
+<script setup>
+import SidebarItem from './SidebarItem.vue'
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+import { routes } from '@/router'
 
-}
+const activeMenu = computed(() => {
+  const route = useRoute()
+  const { meta, path } = route
+  if (meta.activeMenu) {
+    return meta.activeMenu
+  }
+  return path
+})
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="less" scoped>
 </style>

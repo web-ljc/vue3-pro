@@ -12,7 +12,7 @@
           <router-link to="/">
             <el-dropdown-item>首页</el-dropdown-item>
           </router-link>
-          <a href="" target="_blank">
+          <a href="https://github.com/web-ljc" target="_blank">
             <el-dropdown-item>我的Github</el-dropdown-item>
           </a>
         </el-dropdown-menu>
