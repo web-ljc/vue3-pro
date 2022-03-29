@@ -17,6 +17,7 @@
     "path-browserify": "^1.0.1",
     "path-to-regexp": "^6.2.0",
     "vue": "^3.2.25",
+    "vue-i18n": "^9.1.7",
     "vue-router": "^4.0.13",
     "vuex": "^4.0.2"
   },

@@ -1,0 +1,10 @@
+{
+  "nav": {
+    "language": "Language",
+    "userCenter": "user Center",
+    "ch": "Chinese",
+    "en": "English"
+  },
+  "hello": "hello, world!",
+  "createUser": "create User"
+} 

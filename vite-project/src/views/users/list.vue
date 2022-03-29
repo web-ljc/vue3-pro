@@ -3,7 +3,7 @@
     <div class="btn-container">
       <!-- 新增按钮 -->
       <router-link to="/users/create">
-        <el-button type="success" icon="el-icon-edit">创建用户</el-button>
+        <el-button type="success" icon="el-icon-edit">{{ $t('createUser') }}</el-button>
       </router-link>
     </div>
 

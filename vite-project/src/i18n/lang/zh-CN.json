@@ -1,0 +1,10 @@
+{
+  "nav": {
+    "language": "语言",
+    "userCenter": "用户中心",
+    "ch": "中文",
+    "en": "英语"
+  },
+  "hello": "你好，世界！",
+  "createUser": "创建用户"
+} 

@@ -19,6 +19,7 @@ export default defineConfig(({ command, mode }) => {
         'apis': path.resolve(__dirname, 'src/apis'),
         'comps': path.resolve(__dirname, 'src/components'),
         'views': path.resolve(__dirname, 'src/views'),
+        'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js'
       }
     }
   }
