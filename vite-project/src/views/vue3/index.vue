@@ -21,7 +21,7 @@ const compRef = ref(null)
 
 // 定义属性
 const state = reactive({
-  msg: 'vue3-reactive',
+  msg: '父子组件数据交互',
   activeNames: [0],
   stuData: stuData
 })

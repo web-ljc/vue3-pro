@@ -5,6 +5,10 @@
     "ch": "中文",
     "en": "英语"
   },
+  "vue": {
+    "props": "父子组件交换数据",
+    "sendMessage": "发送消息"
+  },
   "hello": "你好，世界！",
   "createUser": "创建用户"
 } 

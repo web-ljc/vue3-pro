@@ -5,6 +5,10 @@
     "ch": "Chinese",
     "en": "English"
   },
+  "vue": {
+    "props": "component props",
+    "sendMessage": "send Message"
+  },
   "hello": "hello, world!",
   "createUser": "create User"
 } 

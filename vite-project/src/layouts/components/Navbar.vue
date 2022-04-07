@@ -16,7 +16,9 @@
         </el-dropdown-menu>
       </el-dropdown>
       <el-dropdown class="avatar-container" trigger='hover' @command="handleCommand">
-        <div class="avatar-wrapper">{{ $t('nav.language') }}</div>
+        <div class="avatar-wrapper">
+          {{ store.state.base.locale === 'zh_CN' ?  $t('nav.ch'): $t('nav.en')}}
+        </div>
         <el-dropdown-menu class="user-dropdown">
           <el-dropdown-item command="zh_CN">{{ $t('nav.ch') }}</el-dropdown-item>
           <el-dropdown-item command="en_US">{{ $t('nav.en') }}</el-dropdown-item>
@@ -26,12 +28,18 @@
   </el-row>
 </template>
 <script setup>
+import { useStore } from 'vuex'
 import Breadcrumb from './Breadcrumb.vue'
 import { getCurrentInstance } from 'vue'
 
+// 获取store
+const store = useStore()
 const { proxy } = getCurrentInstance()
+// 更改语言模式
 const handleCommand = (val) => {
   // console.info(val, 'val')
+  // 更改store值
+  store.commit('changeLocale', val)
   proxy.$i18n.locale = val
 }
 </script>
