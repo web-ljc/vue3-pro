@@ -38,6 +38,12 @@ export const routes = [
         name: 'Vue3',
         meta: { title: 'Vue3', icon: 'el-icon-document-copy' }
       },
+      {
+        path: '/stu',
+        component: () => import('views/stu/index.vue'),
+        name: 'Stu',
+        meta: { title: 'Stu', icon: 'el-icon-document-copy' }
+      },
     ]
   },
   {
