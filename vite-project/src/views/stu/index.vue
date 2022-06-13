@@ -1,52 +1,52 @@
 <template>
   <div class="fa-div">
-    <div> 当前求和为：{{ sum }} </div>
-    <div> 最大值为：{{ num }} </div>
-    <el-button @click="sum++, num--">+1</el-button>
-    <div>姓名: {{obj.name + obj.age}}</div>
-    <el-button @click="obj.name = 'ls', obj.age = 20">改变姓名</el-button>
+    <div> {{ name }} {{ price }} </div>
+    <!-- <teleport to="body">
+      我是一个弹框
+    </teleport> -->
+    <!-- <Suspense>
+      <tenplate v-slot:default>
+        <Child />
+      </tenplate>
+      <tenplate v-slot:fallback>
+        <h3>loading...</h3>
+      </tenplate>
+    </Suspense> -->
   </div>
 </template>
-
+ 
 <script>
-import { ref, reactive, watch, watchEffect } from 'vue'
+// 同步引入子组件，页面加载会等待子组件
+// import Child from './01_ref&reactive.vue'
+
+import { ref, toRefs, reactive, defineAsyncComponent } from 'vue'
+
+// 异步引入子组件，父级页面会先渲染
+// const Child = defineAsyncComponent(() => import('./01_ref&reactive.vue'))
 
 export default {
   name: 'Stu',
   setup() {
-    let sum = ref(0)
-    let num = ref(100)
-    let obj = reactive({
-      name: 'zs',
-      age: 10,
-      job: {
-        work: 'web'
-      }
-    })
-    
-    // 监视
-    watch(sum, () => {})
-    
-    watchEffect(() => {
-      const t1 = sum.value
-      console.log('watchEffect所制定的回调执行');
+    let car = reactive({
+      name: 'car',
+      price: '20w'
     })
 
     return {
-      sum,
-      num,
-      obj
+      ...toRefs(car)
     }
   },
 }
 
 /* 
-  watchEffect(fn)
-    - watch的套路是：既要指明监视的属性，也要指明监视的回调
-    - watchEffect：不用指明监视哪个属性，监视的回调中用到哪个属性，就监视哪个属性
-    - watchEffect 和 computed：
-      + computed注重的计算出来的值（回调函数的返回值），必须要写返回值
-      + watchEffect更注重的是过程（回调函数的函数体），不用写返回值
+  Composition API 优势
+    - 可以更加优雅的组织代码，函数。让相关功能的代码更加有序的组织在一起
+  
+  teleport组件
+    - 将组件html结构移动到制定位置
 
+  suspens组件
+    - 子组件可以异步加载
+    - 需要配置好 default 和 fallback
 */
 </script>
